@@ -2,21 +2,20 @@
 
 This repository aims to document how to send messages from a Raspberry Pi to an Arduino using serial communication. It also shows how an Arduino can read the serial messages and send them via LoRa to [The Things Network (TTN)](https://console.cloud.thethings.network/) console. 
 
-## Repository Structure
-- [Arduino Code](/Arduino%20Code/mkrwan1310_readserial) folder contains (1) the arduino code to read the incoming serial messages and send them to the TTN console and (2) the javascript snippet to decode the payload on the TTN.
+### Repository Structure
+- [Arduino Code](/Arduino%20Code/) folder contains (1) the arduino code [mkrwan1310_readserial](/Arduino%20Code/mkrwan1310_readserial) to read the incoming serial messages and send them to the TTN console and (2) a javascript function [decodeUplink.js](/Arduino%20Code/decodeUplink.js) to decode the payload on the TTN.
 - [Rpi Code](/RPi%20Code/) folder contains two scripts. (1) A bash script [setup_serial.sh](/RPi%20Code/setup_serial.sh) to install the python libraries required for serial communication, and (2) a python script [rpi_sendserial.py](/RPi%20Code/rpi_sendserial.py) to get raspberry pi system data and send it via serial. 
 
-#
 ## SetUp Instructions Overview
-#### Arduino Device
+**Arduino Device**
 1. Register Arduino MKR1310 to a TTN Application.
 2. Upload .ino script to Arduino MKR1310.
-#### Raspberry Pi Device
+
+**Raspberry Pi Device**
 1. Install python libraries and create .py script
 2. Setup cronjob to run .py script on repeating schedule
 3. [Optional] Configure external harddrive.
 
-# 
 ### Arduino SetUp 
 1. Find DeviceEUI from MKRWAN 1310 Board. 
     - Open the Arduino IDE. Install the MKRWAN Arduino library.
