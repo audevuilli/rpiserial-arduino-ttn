@@ -36,14 +36,30 @@ Great links that document the process:
 
 ### Raspberry Pi SetUp
 1. Install python libraries for serial communication
-    - `bash setup_serial.sh`
-2. Create and test the rpi_sendserial.py script
-    - `nano rpi_sendserial.py` paste the content of the script. 
-    - `python3 rpi_sendserial.py` test to see if the script is running correctly.
+```
+    bash setup_serial.sh
+```
+2. Create and test the rpi_sendserial.py script. 
+    - Paste the content of the script `rpi_sendserial.py`, 
+    - Test the script to see if everything work correctly. 
+    - Setup a cronjob to run the script on repeating schedule. Note the Minute Hour Day Month Weekday pattern of crontab.
+    - For rpi_sendserial running 2x a day at 9am and 9pm add the following line at the end of crontab list `0 9,21 * * * /usr/bin/python3 /home/pi/rpi_sendsrial.py`
+```
+    nano rpi_sendserial.py 
+```
+```
+    python3 rpi_sendserial.py 
+```
+```
+    crontab -e
+```
 3. Pay Attention to the following
     - You may need to check the port the Arduino is connected to on your rpi (it will be either `/dev/ttyACM0` or `/dev/ttyACM1` ). Enter `ls /dev/ttyACM*` to check. 
     - With no external harddrive: (1) Modify the path of the logging file, and (2) comment out `get_extdrive_storage()` in the .py script. 
 
+Great links that document the process: 
+- [Crontab Guru: The quick and simple editor for cron shedule expression](https://crontab.guru/)
+- [Serial communication between Raspberry Pi and Arduino](https://www.aranacorp.com/en/serial-communication-between-raspberry-pi-and-arduino/)
 
 ### Raspberry Pi Setup - With External Drive
 
