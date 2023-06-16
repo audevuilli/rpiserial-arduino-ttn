@@ -43,7 +43,7 @@ Great links that document the process:
     - Paste the content of the script `rpi_sendserial.py`, 
     - Test the script to see if everything work correctly. 
     - Setup a cronjob to run the script on repeating schedule. Note the Minute Hour Day Month Weekday pattern of crontab.
-    - For rpi_sendserial running 2x a day at 9am and 9pm add the following line at the end of crontab list `0 9,21 * * * /usr/bin/python3 /home/pi/rpi_sendsrial.py`
+    - For rpi_sendserial running 2x a day at 9am and 9pm add the following line at the end of crontab list `0 9,21 * * * /usr/bin/python3 /home/pi/rpi_sendserial.py`
 ```
     nano rpi_sendserial.py 
 ```
