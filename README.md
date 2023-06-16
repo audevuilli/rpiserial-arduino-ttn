@@ -4,7 +4,7 @@ This repository aims to document how to send messages from a Raspberry Pi to an 
 
 ### Repository Structure
 - [Arduino Code](/Arduino%20Code/) folder contains (1) the arduino code [mkrwan1310_readserial](/Arduino%20Code/mkrwan1310_readserial) to read the incoming serial messages and send them to the TTN console and (2) a javascript function [decodeUplink.js](/Arduino%20Code/decodeUplink.js) to decode the payload on the TTN.
-- [Rpi Code](/RPi%20Code/) folder contains two scripts. (1) A bash script [setup_serial.sh](/RPi%20Code/setup_serial.sh) to install the python libraries required for serial communication, and (2) a python script [rpi_sendserial.py](/RPi%20Code/rpi_sendserial.py) to get raspberry pi system data and send it via serial. 
+- [RPi Code](/RPi%20Code/) folder contains two scripts. (1) A bash script [setup_serial.sh](/RPi%20Code/setup_serial.sh) to install the python libraries required for serial communication, and (2) a python script [rpi_sendserial.py](/RPi%20Code/rpi_sendserial.py) to get raspberry pi system data and send it via serial. 
 
 ## SetUp Instructions Overview
 **Arduino Device**
