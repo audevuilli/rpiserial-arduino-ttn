@@ -63,4 +63,27 @@ Great links that document the process:
 
 ### Raspberry Pi Setup - With External Drive
 
+When plugging an external storage to a Raspberry Pi, the storage needs to be mounted to be accessible for read, write, delete. Good articles explaining the steps to mount an external drive can be found on [PiMyLife Up](https://pimylifeup.com/raspberry-pi-mount-usb-drive/) or [GeekWorm](https://geekworm.com/blogs/news/how-to-mount-usb-storage-on-raspberry-pi).
 
+The steps are the following:
+1. Plug USB drive into the RPi and check that storage is attached. Copy the UUID and pay attention to disk type (i.e., ext4, ntfs, vfat)
+```
+    sudo blikd 
+```
+2. Create a location to mount the drive
+```
+    sudo mkdir /mnt/external-drive 
+```
+3. Give permission to the RPi to access the folder
+```
+    sudo chown -R pi:pi /mnt/external-drive/
+    sudo chmod 775 /mnt/external-drive/
+```
+4. Mount the drive into the created folder
+```
+    sudo mount /dev/sda1 /mnt/external-drive
+```
+5. Allow the drive to automatically mount on boot, modify `/etc/fstab` file adding a line with the drive UUID, path, type, defaults, 0 0
+```
+    sudo nano /etc/fstab
+```
