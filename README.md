@@ -8,16 +8,16 @@ This repository aims to document how to send messages from a Raspberry Pi to an 
 - [Google Apps Script](/GApps%20Script/) folder contains (1) the Apps Script code [ttn_gsheet.js](/GApps%20Script/ttn_gsheet.js) to update a Google sheet every time new data arrives in the TTN console. 
 
 ## Setup Instructions Overview
-[**Arduino Device**](##Arduino-Setup)
+[**Arduino Device**](#Arduino-Setup)
 1. Register Arduino MKR1310 to a TTN Application.
 2. Upload .ino script to Arduino MKR1310.
 
-[**Raspberry Pi Device**](##Raspberry-Pi-Setup)
+[**Raspberry Pi Device**](#Raspberry-Pi-Setup)
 1. Install Python libraries and create a .py script
 2. Setup cronjob to run .py script on repeating schedule
 3. [Optional] Configure external hard drive.
 
-[**Google Apps Script**](##GSheet-Apps-Script)
+[**Google Apps Script**](#GSheet-Apps-Script)
 1. Setup a script to a google spreadsheet.
 2. Deploy gsheet script as a web app. 
 3. Integrate web app to the TTN using Webhooks.
