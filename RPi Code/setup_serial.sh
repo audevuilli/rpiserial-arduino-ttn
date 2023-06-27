@@ -1,7 +1,7 @@
 #!/bin/sh
-#Move to home directiory
+#Move to home directory
 cd ~
 
-# Install pip, serial, psutil
-sudo apt install pip3
-pip install serial, psutil
+# Install pip, pyserial psutil
+sudo apt install pip
+pip install pyserial psutil
